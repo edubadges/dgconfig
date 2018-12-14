@@ -23,6 +23,12 @@ class ConfigurationType(object):
     So a configuration named `my_config` will be accessible with `config.my_config`.
 
     You can check if a configuration exists by using the `in` operator.
+
+    :param defaults: (dict) that should hold default configurations as items
+        or None to load defaults from settings at runtime
+    :param namespace: (string) prefix to search default configurations with
+    :param private: (list) keys that are considered as private
+    :return: ConfigurationType
     """
 
     _private_defaults = ["_private", "_defaults", "_namespace"]
@@ -33,6 +39,7 @@ class ConfigurationType(object):
         Initiates the ConfigurationType by checking arguments and setting logically private attributes
 
         :param defaults: (dict) that should hold default configurations as items
+            or None to load defaults from settings at runtime
         :param namespace: (string) prefix to search default configurations with
         :param private: (list) keys that are considered as private
         :return: None
@@ -147,6 +154,7 @@ class ConfigurationType(object):
 
         :param config: (dict) the configuration keys and values to create a configuration with
         :param defaults: (dict) the configuration keys and values that act as a fallback
+            or None to load defaults from settings at runtime
         :return: a configuration instance
         """
         assert isinstance(config, dict), \
@@ -155,7 +163,7 @@ class ConfigurationType(object):
             "_namespace needs to be specified in the configuration."
         assert "_private" in config, \
             "_private needs to be specified in the configuration."
-        assert isinstance(defaults, dict), \
+        assert isinstance(defaults, dict) or None, \
             "Defaults should be a dict which values are the configuration defaults."
         instance = cls(
             defaults=defaults,
@@ -259,6 +267,7 @@ class ConfigurationProperty(object):
 
     :param storage_attribute: (string) name of the attribute used to store configurations on the owner class
     :param defaults: (dict) should hold default configurations as items
+        or None to load defaults from settings at runtime
     :param namespace: (string) prefix to search default configurations with
     :param private: (list) keys that are considered as private for this property
     :return: ConfigurationType
@@ -270,6 +279,7 @@ class ConfigurationProperty(object):
 
         :param storage_attribute: (string) name of the attribute used to store configurations on the owner class
         :param defaults: (dict) should hold default configurations as items
+            or None to load defaults from settings at runtime
         :param namespace: (string) prefix to search default configurations with
         :param private: (list) keys that are considered as private for this property
         :return: ConfigurationType

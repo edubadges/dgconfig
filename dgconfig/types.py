@@ -44,7 +44,7 @@ class ConfigurationType(object):
         :param private: (list) keys that are considered as private
         :return: None
         """
-        assert isinstance(defaults, dict) or None, \
+        assert isinstance(defaults, dict) or defaults is None, \
             "Defaults should be a dict which values are the configuration defaults."
         assert isinstance(namespace, str), \
             "Namespaces should be a string that acts as a prefix for finding configurations."
@@ -163,7 +163,7 @@ class ConfigurationType(object):
             "_namespace needs to be specified in the configuration."
         assert "_private" in config, \
             "_private needs to be specified in the configuration."
-        assert isinstance(defaults, dict) or None, \
+        assert isinstance(defaults, dict) or defaults is None, \
             "Defaults should be a dict which values are the configuration defaults."
         instance = cls(
             defaults=defaults,

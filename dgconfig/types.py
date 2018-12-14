@@ -10,7 +10,7 @@ Configurations may get overridden at runtime, which typically happens during req
 import warnings
 from copy import copy
 
-from dgconfig.settings import DATAGROWTH_DEFAULT_CONFIGURATION
+from .settings import DATAGROWTH_DEFAULT_CONFIGURATION
 
 
 class ConfigurationNotFoundError(AttributeError):

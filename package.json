@@ -1,0 +1,5 @@
+{
+    "name": "dgconfig",
+    "version": "0.0.1",
+    "description": "A configuration package for Django to store configurations in the database and/or transfer them to for instance Celery"
+}

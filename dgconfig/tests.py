@@ -3,8 +3,8 @@ from collections import Iterator
 
 from django.test import TestCase
 
-from dgconfig.configuration import (ConfigurationType, ConfigurationNotFoundError, ConfigurationProperty, load_config,
-                                      get_standardized_configuration, MOCK_CONFIGURATION)
+from . import (ConfigurationType, ConfigurationNotFoundError, ConfigurationProperty, load_config,
+                               get_standardized_configuration, MOCK_CONFIGURATION)
 
 
 class TestConfigurationType(TestCase):

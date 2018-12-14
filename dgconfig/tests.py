@@ -139,7 +139,7 @@ class TestConfigurationType(TestCase):
         self.assertTrue("test4" in self.config)
         self.assertFalse("test5" in self.config)
 
-    @patch("dgconfig.configuration.types.ConfigurationType.update")
+    @patch("dgconfig.dgconfig.types.ConfigurationType.update")
     def test_supplement(self, update_method):
         self.config.supplement({"test": "public 2"})
         self.assertEqual(self.config.test, "public")

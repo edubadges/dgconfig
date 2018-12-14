@@ -3,5 +3,5 @@
 Serializers
 ===========
 
-.. automodule:: dgconfig.configuration.serializers
+.. automodule:: dgconfig.dgconfig.serializers
     :members:

@@ -10,5 +10,5 @@ Configuration
     configuration/fields
     configuration/serializers
 
-.. automodule:: dgconfig.configuration.types
+.. automodule:: dgconfig.dgconfig.types
     :members: ConfigurationProperty, ConfigurationType

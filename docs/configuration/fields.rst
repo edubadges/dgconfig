@@ -3,5 +3,5 @@
 Fields
 ======
 
-.. automodule:: dgconfig.configuration.fields
+.. automodule:: dgconfig.dgconfig.fields
     :members:

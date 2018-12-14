@@ -37,8 +37,7 @@ class ConfigurationType(object):
         :param private: (list) keys that are considered as private
         :return: None
         """
-        defaults = defaults or DATAGROWTH_DEFAULT_CONFIGURATION
-        assert isinstance(defaults, dict), \
+        assert isinstance(defaults, dict) or None, \
             "Defaults should be a dict which values are the configuration defaults."
         assert isinstance(namespace, str), \
             "Namespaces should be a string that acts as a prefix for finding configurations."
@@ -109,6 +108,10 @@ class ConfigurationType(object):
             return self.__dict__[shielded_key]
         elif variable_key in self.__dict__:
             return self.__dict__[variable_key]
+
+        if self._defaults is None:
+            self._defaults = DATAGROWTH_DEFAULT_CONFIGURATION
+
         if namespace_attr in self._defaults:
             return self._defaults[namespace_attr]
         elif global_attr in self._defaults:

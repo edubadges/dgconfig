@@ -14,7 +14,7 @@ setuptools.setup(
     install_requires=[
         "Django>=1.11"
     ],
-    python_requires="~=3.4",
+    python_requires="~=2.7",
     include_package_data=True,
     classifiers=(
         "Programming Language :: Python :: 3",

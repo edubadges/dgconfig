@@ -1,6 +1,6 @@
 import argparse
 import hashlib
-from urllib.parse import parse_qsl
+from urlparse import parse_qsl
 
 from .types import ConfigurationType
 

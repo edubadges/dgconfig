@@ -9,7 +9,7 @@ setuptools.setup(
     description="A configuration package for Django to store configurations in the database and/or transfer them to for instance Celery",
     long_description="A configuration package for Django to store configurations in the database and/or transfer them to for instance Celery",
     long_description_content_type="text/markdown",
-    url="https://github.com/fako/dgconfig",
+    url="https://github.com/edubadges/dgconfig",
     packages=setuptools.find_packages(),
     install_requires=[
         "Django>=1.11"
@@ -17,7 +17,7 @@ setuptools.setup(
     python_requires="~=2.7",
     include_package_data=True,
     classifiers=(
-        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 2",
         "License :: OSI Approved :: MIT",
         "Operating System :: OS Independent",
     ),

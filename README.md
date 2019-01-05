@@ -19,7 +19,7 @@ Installation
 ------------  
 
 ```
-pip install git+https://github.com/fako/dgconfig
+pip install git+https://github.com/edubadges/dgconfig
 ```
 
 

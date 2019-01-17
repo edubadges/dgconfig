@@ -9,7 +9,7 @@ Configurations can also be used as a bag of properties.
 This is useful for Django models that have a very wide configuration range.
 """
 
-import warnings
+import warnings, json
 from copy import copy
 
 from .settings import DATAGROWTH_DEFAULT_CONFIGURATION

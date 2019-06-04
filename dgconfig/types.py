@@ -82,7 +82,7 @@ class ConfigurationType(object):
         """
         if not new:
             return
-        if isinstance(new, unicode):
+        if isinstance(new, str):
             new = json.loads(new)
         assert isinstance(new, dict), "Configurations can only be set with a dictionary not a {}".format(type(new))
         for key, value in new.items():
